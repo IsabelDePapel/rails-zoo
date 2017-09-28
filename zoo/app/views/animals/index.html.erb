@@ -4,15 +4,7 @@
 <ul>
   <% @animals.each do |animal| %>
   <li>
-    <%= animal.name %>
-    <ul>
-      <li>
-        <%= animal.species %>
-      </li>
-      <li>
-        <%= animal.age %>
-      </li>
-    </ul>
+    <%= animal.name %> (<%= animal.species %>)
   </li>
   <% end %>
 </ul>
