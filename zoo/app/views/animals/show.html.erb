@@ -1,2 +1,11 @@
-<h1>Animals#show</h1>
-<p>Find me in app/views/animals/show.html.erb</p>
+<h1><%= @animal.name %> the <%= @animal.species %></h1>
+
+<img src='http://lorempixel.com/400/200/animals/' alt='random animal image' />
+<p>
+  <% @years = @animal.age == 1 ? " year" : " years" %>
+  Age: <%= @animal.age %> <%= @years %> old
+</p>
+
+<p>
+  Favorite food: <%= @animal.fav_food %>
+</p>
