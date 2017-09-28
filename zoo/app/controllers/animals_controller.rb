@@ -1,5 +1,6 @@
 class AnimalsController < ApplicationController
   def index
+    @animals = Animal.order(:name)
   end
 
   def show
