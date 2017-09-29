@@ -1,11 +1,20 @@
 <h1><%= @animal.name %> the <%= @animal.species %></h1>
+<h2><%= link_to("Home", root_path, alt: "home page") %></h2>
 
 <img src='http://lorempixel.com/400/200/animals/' alt='random animal image' />
 <p>
-  <% @years = @animal.age == 1 ? " year" : " years" %>
-  Age: <%= @animal.age %> <%= @years %> old
+  <% @years = @animal.age == 1 ? "year" : "years" %>
+  Age: <%= "#{@animal.age} #{@years}" %> old
 </p>
 
 <p>
   Favorite food: <%= @animal.fav_food %>
+</p>
+
+<p>
+  <%= link_to('Edit Info', edit_animal_path, alt: 'link to edit form') %>
+</p>
+
+<p>
+  <%= link_to("Delete #{@animal.name} from the zoo", delete_animal_path, alt: 'delete animal', method: :delete, data: { confirm: "Delete #{@animal.name}?" }) %>
 </p>

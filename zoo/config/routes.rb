@@ -11,9 +11,9 @@ Rails.application.routes.draw do
 
   post '/animals', to: 'animals#create', as: 'create_animal' # create_animal_path
 
-  patch '/animals/:id/update', to: 'animals#update', as: 'update_animal' # update_animal_path
+  patch '/animals/:id', to: 'animals#update', as: 'update_animal' # update_animal_path
 
-  delete '/animals/:id/destroy', to: 'animals#destroy', as: 'delete_animal' # delete_animal_path
+  delete '/animals/:id', to: 'animals#destroy', as: 'delete_animal' # delete_animal_path
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
