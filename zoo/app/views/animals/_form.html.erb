@@ -11,5 +11,10 @@
   <%= f.label "Favorite food" %>
   <%= f.text_field :fav_food %>
 
+  <%= f.label "Image URL" %>
+  <%= f.text_field :image_src %>
+
+  <%# image_tag "#{@animal.image_src}", alt: "#{@animal.species} image" %>
+
   <%= f.submit button_name %>
 <% end %>
